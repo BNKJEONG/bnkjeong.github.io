@@ -52,7 +52,7 @@ category_page: '/blog/categories/'
 
 # Puglins
 mathjax: true # whether support mathjax
-google_analytics_token: 'UA-92094009-1' # leave blank if you don't want google analytics
+google_analytics_token: 'UA-131473708-1' # leave blank if you don't want google analytics
 disqus_short_name: 'wayhome25-github-io' # leave blank if you don't want disqus
 
 
