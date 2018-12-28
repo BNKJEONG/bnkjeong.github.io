@@ -53,6 +53,7 @@ category_page: '/blog/categories/'
 # Puglins
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-131473708-1' # leave blank if you don't want google analytics
+disqus_short_name: 'baeharam-github-io'
 
 
 # Use the following plug-ins
