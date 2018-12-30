@@ -25,7 +25,7 @@ KMP 알고리즘은 어떤 문자열 $H$와 $S$가 주어졌고 $H$가 $S$보다
 
 그럼 위에서 말한대로 `ABA`까지 일치하니까 한번에 옮기면 되는 것일까? 아래 그림을 보자.
 
-<img src="../../assets/post-img/algorithm/kmp/kmp_brute_force.png" width="400px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp_brute_force.PNG" width="400px">
 
 `ABA`를 건너뛰고 한번에 옮겼더니 원래 계산해야 될 1번째,2번째 인덱스를 생략할 수 있었다. 그러나 빼먹은 부분이 있으니 바로 `ABA`는 반복되는 부분문자열이 있다는 것이다.
 
@@ -35,7 +35,7 @@ KMP 알고리즘은 어떤 문자열 $H$와 $S$가 주어졌고 $H$가 $S$보다
 
 `ABA`는 `A`가 접미사이면서 접두사가 되기 때문에 앞쪽의 `AB`를 건너뛸 수 있게 되므로 아래그림과 같이 2번째 인덱스부터 비교하면 되는 것이다.
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp2.png" width="400px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp2.PNG" width="400px">
 
 결국 이 말은 $S$에서 0번째 인덱스를 제외한 다른 인덱스들에 대해 접두사와 접미사가 일치하는 부분을 알아야 한다는 것이다. 그래야 그만큼을 탐색하지 않고 건너뛸 수 있기 때문에 따로 그 값을 미리 구해놓아야 한다. (0번째 인덱스를 제외하는 이유는 문자 1개밖에 없기 때문)
 
@@ -45,29 +45,29 @@ KMP 알고리즘은 어떤 문자열 $H$와 $S$가 주어졌고 $H$가 $S$보다
 
 실패 함수는 KMP에서 아주 중요한 개념이고 상당히 많이 활용되기 때문에 반드시 익혀야 한다. 이번엔 예시를 좀 변경해서 $S$를 좀 더 긴 문자열로 잡고 실패 함수값을 구해보자. $S$를 `ABABAB`라고 하고 실패 함수를 $F(k)$라고 하면, $F(k)$의 의미는 **$k$번째 인덱스에서 접두사와 접미사가 일치하는 최대길이**이다. (최대인 이유는 굳이 최대로 일치하는 부분이 있음에도 불구하고 그것보다 작은 길이 만큼 건너뛰는 것은 낭비이기 때문)
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp3.png" width="400px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp3.PNG" width="400px">
 
 위에서 말했던 것처럼 0번째 인덱스는 스킵하고 1번째 인덱스부터 보면 `AB`에서 접두사,접미사가 일치하는 부분이 없기 때문에 $F(1)=0$이다.
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp4.png" width="400px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp4.PNG" width="400px">
 
 다음으로 `ABA`에선 `A`가 최대로 일치하는 부분이므로 $F(2)=1$이다.
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp5.png" width="400px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp5.PNG" width="400px">
 
 그 다음은 `ABAB`이기 때문에 `AB`가 최대로 일치, 따라서 $F(3)=2$이다.
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp6.png" width="400px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp6.PNG" width="400px">
 
 `ABABA`에선 `ABA`가 최대이므로 $F(4)=3$.
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp7.png" width="400px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp7.PNG" width="400px">
 
 마지막으로 `ABABAB`에서 `ABAB`가 최대이므로 $F(5)=4$가 된다. (`ABABAB`가 아님!!)
 
 구한 실패 함수 값들을 표로 나타내보면 다음과 같다.
 
-<img src="../..//assets/post-img/algorithm/kmp/table1.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/table1.PNG" width="500px">
 
 그럼 실패 함수값들을 KMP에서 어떻게 활용할 수 있을까?
 
@@ -78,7 +78,7 @@ KMP 알고리즘은 어떤 문자열 $H$와 $S$가 주어졌고 $H$가 $S$보다
 * $H[begin+m]==S[m]$: 일치할 경우, $m$이 증가한다.
 * $H[begin+m]!=S[m]$: 불일치할 경우, $begin$이 스킵하는 만큼 증가하고 $m$이 실패 함수값이 된다.
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp_r1.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp_r1.PNG" width="500px">
 
 $m=3$으로 3번째 인덱스에서 불일치가 발생한 경우이다. 이 경우엔 $m-1$의 실패 함수 값을 확인하는데 $m$개가 일치했다는 것은 인덱스 $m-1$까지 일치했다는 말과 동일하기 때문이다. 위에서 구했던 것처럼 $F(2)=1$이기 때문에 다시 $S$의 1번째 인덱스부터 비교하면 된다. 
 
@@ -86,11 +86,11 @@ $m=3$으로 3번째 인덱스에서 불일치가 발생한 경우이다. 이 경
 
 또한 $begin$ 값을 옮겨주어야 하는데 $begin$에 $m-F(m-1)$만큼 더해주면 된다. 이게 갑자기 왜 나왔냐 싶을지도 모르지만 생각해보면 일치하는 만큼($m$) 옮긴다음 반복되는 문자열의 길이 만큼($F(m-1)$) 빼주는 개념이다. 위 예시에선 $begin=0$인 상태에서 $m=3$을 더하면 $begin=3$이 되지만 $F(m-1)=1$을 빼주면 $begin=2$가 되기 때문에 알고리즘이 동작한다는 것을 확인할 수 있다.
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp_r2.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp_r2.PNG" width="500px">
 
 $m=1$로 옮겨진 후에 다시 비교해서 불일치가 발생하였다. $F(1-1)=F(0)=0$이기 때문에 $m=0$이되고 $begin=2+1-0=3$이 되서 다시 비교를 시작한다.
 
-<img src="../..//assets/post-img/algorithm/kmp/kmp_r3.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/kmp_r3.PNG" width="500px">
 
 드디어 $S$를 찾았는데 이 경우에는 단순히 완전히 건너뛰면 되는 것일까? 생각해보면, **완전히 일치하는 경우에도 접두사와 접미사가 일치하는 부분이 존재한다.** 즉, 현재 $m=6$인데 $F(6-1)=F(5)=4$로 4개가 일치한다는 것을 알 수 있다. $S$가 더 있을 가능성이 아직 남아있는 것이다. 따라서, $m=4$로 초기화되고 $begin=3+6-4=5$가 되는데 5부터 남은 문자개수가 5개이기 때문에 종료하게 된다. 즉, $begin$ 값이 $S$의 길이를 충족시킬 수 있을 때까지만 지속하는 것이다.
 
@@ -148,35 +148,35 @@ $begin$과 $m$을 똑같이 쓸텐데 헷갈릴 수 있으니 각 인덱스에�
 - $begin=1$
 - $m=0$
 
-<img src="../..//assets/post-img/algorithm/kmp/fail1.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/fail1.PNG" width="500px">
 
 $H[begin+m]=H[1]$이 $S[m]=S[0]$과 불일치하고 $m=0$이므로 $begin$만 증가한다.
 
 * $begin=2$
 * $m=0$
 
-<img src="../..//assets/post-img/algorithm/kmp/fail2.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/fail2.PNG" width="500px">
 
 $H[2]$가 $S[0]$과 일치하기 때문에 $m$이 증가하고 $F[begin+m-1]=F[2]=1$이 된다.
 
 * $begin=2$
 * $m=1$
 
-<img src="../..//assets/post-img/algorithm/kmp/fail3.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/fail3.PNG" width="500px">
 
 $H[3]$과 $S[1]$이 일치하기 때문에 $m$이 증가하고 $F[3]=2$가 된다.
 
 * $begin=2$
 * $m=2$
 
-<img src="../..//assets/post-img/algorithm/kmp/fail4.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/fail4.PNG" width="500px">
 
 $H[4]$와 $S[2]$가 일치하기 때문에 $m$이 증가하고 $F[4]=3$이 된다.
 
 * $begin=2$
 * $m=3$
 
-<img src="../..//assets/post-img/algorithm/kmp/fail5.png" width="500px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/algorithm/kmp/fail5.PNG" width="500px">
 
 마지막으로 $H[5]$와 $S[3]$이 일치해서 $m$이 증가하고 $F[5]=4$가 된 후에 종료된다.
 
@@ -214,7 +214,7 @@ vector<int> failure_function(const string& S)
 }
 ```
 
-사소한 부분을 제외하고는 거의 동일하게 동작한다는 것을 알 수 있다. 시간복잡도는 당연히 KMP를 활용하기 때문에 $S$의 길이를 $S_L$이라고 했을 때 $O(S_L)$만큼 나오게 된다. 결론적으로 KMP알고리즘의 최종 시간복잡도는 $O(H_L+S_L)$로 보통 $H_L \ge S_L$인 점을 감안하면 $O(H_L)​$이라고도 할 수 있다.
+사소한 부분을 제외하고는 거의 동일하게 동작한다는 것을 알 수 있다. 시간복잡도는 당연히 KMP를 활용하기 때문에 $S$의 길이를 $S_L$이라고 했을 때 $O(S_L)$만큼 나오게 된다. 결론적으로 KMP알고리즘의 최종 시간복잡도는 $O(H_L+S_L)$로 보통 $H_L \ge S_L$인 점을 감안하면 $O(H_L)$이라고도 할 수 있다.
 
 ## References
 
