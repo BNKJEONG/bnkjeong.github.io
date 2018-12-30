@@ -38,7 +38,7 @@ nav:
     # - { Categories All: '/blog/categories/' }
     - { Flutter(플러터): '/blog/categories/#flutter-플러터' }
     - { Dart(다트): '/blog/categories/#dart-다트' }
-    - { 알고리즘 문제풀이: '/blog/categories/#알고리즘-문제풀이' }
+    - { 알고리즘: '/blog/categories/#알고리즘' }
     # - { Tags: '/blog/tags/' }
   About:
     - '/about/'
