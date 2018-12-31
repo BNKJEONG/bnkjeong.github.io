@@ -39,6 +39,8 @@ nav:
     - { Flutter(플러터): '/blog/categories/#flutter-플러터' }
     - { Dart(다트): '/blog/categories/#dart-다트' }
     - { 알고리즘: '/blog/categories/#알고리즘' }
+    - { PS: '/blog/categories/#PS' }
+		
     # - { Tags: '/blog/tags/' }
   About:
     - '/about/'
