@@ -40,6 +40,7 @@ nav:
     - { Dart(다트): '/blog/categories/#dart-다트' }
     - { 알고리즘: '/blog/categories/#알고리즘' }
     - { PS: '/blog/categories/#ps' }
+    - { 디자인 패턴: '/blog/categories/#design-pattern' }
     # - { Tags: '/blog/tags/' }
   About:
     - '/about/'
