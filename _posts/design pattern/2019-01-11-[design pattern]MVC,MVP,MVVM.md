@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Design Pattern] MVC, MVP와 MVVM"
-category: Design Pattern
+category: 디자인 패턴
 permalink: /design_pattern/:year/:month/:day/:title/
 tags: [design pattern, mvc, mvp, mvvm]
 comments: true
