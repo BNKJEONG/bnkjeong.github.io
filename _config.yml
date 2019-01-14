@@ -41,6 +41,7 @@ nav:
     - { 알고리즘: '/blog/categories/#알고리즘' }
     - { PS: '/blog/categories/#ps' }
     - { 디자인 패턴: '/blog/categories/#design-pattern' }
+    - { 안드로이드: '/blog/categories/#android' }
     # - { Tags: '/blog/tags/' }
   About:
     - '/about/'
