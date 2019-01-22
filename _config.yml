@@ -42,6 +42,7 @@ nav:
     - { PS: '/blog/categories/#ps' }
     - { 디자인 패턴: '/blog/categories/#design-pattern' }
     - { 안드로이드: '/blog/categories/#android' }
+    - { GIT: '/blog/categories/#git' }
     # - { Tags: '/blog/tags/' }
   About:
     - '/about/'
