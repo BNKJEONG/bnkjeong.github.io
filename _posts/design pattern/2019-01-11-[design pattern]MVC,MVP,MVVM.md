@@ -17,7 +17,7 @@ comments: true
 
 ## MVC(Model-View-Controller)
 
-<img src="../../assets/post-img/design pattern/mvc.png" width="600px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/design%20pattern/mvc.PNG" width="600px">
 
 각 컴포넌트가 무엇을 의미하며 어떤 동작을 하는지는 아래와 같다.
 
@@ -36,7 +36,7 @@ comments: true
 
 ## MVP(Model-View-Presenter)
 
-<img src="../../assets/post-img/design pattern/mvp.png" width="600px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/design%20pattern/mvp.PNG" width="600px">
 
 Model과 View는 동일하지만 Controller가 Presenter로 바뀌었고 View와 Model은 Presenter를 통해 동작한다.
 
@@ -52,7 +52,7 @@ Model과 View 사이의 의존성은 없어졌지만 View와 Presenter간의 의
 
 ## MVVM(Model-View-ViewModel)
 
-<img src="../../assets/post-img/design pattern/mvvm.png" width="600px">
+<img src="https://raw.githubusercontent.com/baeharam/baeharam.github.io/master/assets/post-img/design%20pattern/mvvm.PNG" width="600px">
 
 Presenter가 ViewModel로 바뀌었는데 ViewModel이 이 아키텍쳐의 핵심이다. 
 
