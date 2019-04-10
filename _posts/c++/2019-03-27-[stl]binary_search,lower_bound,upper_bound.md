@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[C/C++] binary_search, lower_bound, upper_bound"
-category: c/c++
-permalink: /ps/:year/:month/:day/:title/
+title: "[C++] binary_search, lower_bound, upper_bound"
+category: C++
+permalink: /c++/:year/:month/:day/:title/
 tags: [STL, binary_search, lower_bound, upper_bound]
 comments: true
 ---

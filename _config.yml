@@ -40,7 +40,7 @@ nav:
     - { Dart(다트): '/blog/categories/#dart-다트' }
     - { 알고리즘: '/blog/categories/#알고리즘' }
     - { 자료구조: '/blog/categories/#자료구조' }
-    - { C/C++: '/blog/categories/#c/c++' }
+    - { C/C++: '/blog/categories/#c++' }
     - { JAVA: '/blog/categories/#java' }
     - { PS: '/blog/categories/#ps' }
     - { 디자인 패턴: '/blog/categories/#design-pattern' }
