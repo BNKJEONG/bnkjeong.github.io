@@ -1,7 +1,7 @@
 # Site Info
 title: '기록하고 정리하자'
-tagline: '배하람의 삽질블로그'
-description: '삽질하면서 발전 중인 블로그입니다.'
+tagline: 'BNK_JEONG 삽질기록'
+description: '코린이 스킬업 블로그.'
 baseurl: ""
 url: https://bnkjeong.github.io
 
@@ -23,11 +23,11 @@ version: 1.0.0
 
 # About/contact
 author:
-  name: Haram Bae
-  description: 배하람(Haram Bae)
+  name: YOUNGCHEOL JEONG
+  description: 정영철(YoungCheol Jeong)
   contact:
-    github:    https://github.com/baeharam
-    email:     gkfka6484@gmail.com
+    github:    https://github.com/bnkjeong
+    email:     koretoiles91@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
@@ -36,15 +36,6 @@ nav:
   Categories:
     - '/'
     # - { Categories All: '/blog/categories/' }
-    - { Flutter(플러터): '/blog/categories/#flutter-플러터' }
-    - { Dart(다트): '/blog/categories/#dart-다트' }
-    - { 알고리즘: '/blog/categories/#알고리즘' }
-    - { 자료구조: '/blog/categories/#자료구조' }
-    - { C/C++: '/blog/categories/#c++' }
-    - { JAVA: '/blog/categories/#java' }
-    - { PS: '/blog/categories/#ps' }
-    - { 디자인 패턴: '/blog/categories/#design-pattern' }
-    - { 안드로이드: '/blog/categories/#android' }
     - { GIT: '/blog/categories/#git' }
     # - { Tags: '/blog/tags/' }
   About:
@@ -60,7 +51,7 @@ category_page: '/blog/categories/'
 # Puglins
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-131473708-1' # leave blank if you don't want google analytics
-disqus_short_name: 'baeharam-github-io'
+disqus_short_name: 'bnkjeong-github-io'
 
 
 # Use the following plug-ins
