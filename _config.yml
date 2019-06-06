@@ -1,6 +1,6 @@
 # Site Info
 title: '기록하고 정리하자'
-tagline: 'BNK_JEONG 삽질기록'
+tagline: '코린이 스킬업 블로그'
 description: '코린이 스킬업 블로그.'
 baseurl: ""
 url: https://bnkjeong.github.io
@@ -24,7 +24,8 @@ version: 1.0.0
 # About/contact
 author:
   name: YOUNGCHEOL JEONG
-  description: 정영철(YoungCheol Jeong)
+  description: 정영철 (YoungCheol Jeong)
+               BNK
   contact:
     github:    https://github.com/bnkjeong
     email:     koretoiles91@gmail.com
